@@ -3,4 +3,5 @@ eo Esperanto
 fr Français
 he עברית
 ja 日本語
+pl Polski
 ru Русский
