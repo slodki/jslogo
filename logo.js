@@ -1762,8 +1762,8 @@ function LogoInterpreter(turtle, stream, savehook)
     return sifw(input, list);
  });
 
-  def("lowercase", function(word) { return sexpr(word).toLowerCase(); });
-  def("uppercase", function(word) { return sexpr(word).toUpperCase(); });
+  def(["lowercase", "lc"], function(word) { return sexpr(word).toLowerCase(); });
+  def(["uppercase", "uc"], function(word) { return sexpr(word).toUpperCase(); });
 
   def("standout", function(word) {
     // Hack: Convert English alphanumerics to Mathematical Bold
@@ -1818,7 +1818,7 @@ function LogoInterpreter(turtle, stream, savehook)
 
   // 3.2 Receivers
 
-  def("readlist", function() {
+  def(["readlist", "rl"], function() {
     return (
       (arguments.length > 0)
         ? stream.read(stringify_nodecorate(arguments[0]))
@@ -2738,7 +2738,7 @@ function LogoInterpreter(turtle, stream, savehook)
   // 7.7 Workspace Control
   //
 
-  def("erase", function(list) {
+  def(["erase", "er"], function(list) {
     list = lexpr(list);
 
     // Delete procedures
