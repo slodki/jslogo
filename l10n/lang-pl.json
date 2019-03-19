@@ -1,5 +1,6 @@
 {
   "page": {
+    "examples": "l10n/examples.pl.txt",
     "translations": {
       "title": "Interpreter Logo",
       "tl-title": "Interpreter Logo",
@@ -28,6 +29,7 @@
       "extras-download-library": "Pobierz bibliotekę",
       "extras-download-drawing": "Pobierz rysunek",
       "extras-clear-history": "Wyczyść historię",
+      "history-placeholder": "Polecenia które wprowadzisz pojawią się tutaj abyś mógł je odnaleźć, zmienić i wykonać ponownie",
       "extras-clear-library": "Wyczyść bibbliotekę"
     }
   },
