@@ -1,53 +1,53 @@
 oto gwiazda
   powtórz 5 [ np 100 pw 144 ]
 już
-clearscreen
+czyść
 gwiazda
 
-to square :length
-  repeat 4 [ fd :length rt 90 ]
-end
-to randomcolor
-  setcolor pick [ red orange yellow green blue violet ]
-end
-clearscreen
-repeat 36 [ randomcolor square random 200 rt 10 ]
+oto kwadrat :długość
+  powtórz 4 [ np :długość pw 90 ]
+już
+oto losuj_kolor
+  ustalkolor los [ czerwony pomarańczowy żółty zielony niebieski fioletowy ]
+już
+czyść
+powtórz 36 [ losuj_kolor kwadrat losowa 200 pw 10 ]
 
-clearscreen window hideturtle
-repeat 144 [
-  setlabelheight repcount
-  penup
-  fd repcount * repcount / 30
-  label "Logo
-  bk repcount * repcount / 30
-  pendown
-  rt 10
-  wait 5
+czyść okno sż
+powtórz 144 [
+  ustalwysokośćtekstu numpow
+  podnieś
+  np numpow * numpow / 30
+  pisztekst "Logo
+  ws numpow * numpow / 30
+  opuść
+  pw 10
+  czekaj 5
 ]
-showturtle
+pż
 
-to tree :size
-   if :size < 5 [forward :size back :size stop]
-   forward :size/3
-   left 30 tree :size*2/3 right 30
-   forward :size/6
-   right 25 tree :size/2 left 25
-   forward :size/3
-   right 25 tree :size/2 left 25
-   forward :size/6
-   back :size
-end
-clearscreen
-tree 150
+oto drzewo :rozmiar
+   jeśli :rozmiar < 5 [naprzód :rozmiar wstecz :rozmiar stop]
+   naprzód :rozmiar/3
+   lewo 30 drzewo :rozmiar*2/3 prawo 30
+   naprzód :rozmiar/6
+   prawo 25 drzewo :rozmiar/2 lewo 25
+   naprzód :rozmiar/3
+   prawo 25 drzewo :rozmiar/2 lewo 25
+   naprzód :rozmiar/6
+   wstecz :rozmiar
+już
+czyść
+drzewo 150
 
-to fern :size :sign
-  if :size < 1 [ stop ]
-  fd :size
-  rt 70 * :sign fern :size * 0.5 :sign * -1 lt 70 * :sign
-  fd :size
-  lt 70 * :sign fern :size * 0.5 :sign rt 70 * :sign
-  rt 7 * :sign fern :size - 1 :sign lt 7 * :sign
-  bk :size * 2
-end
-window clearscreen pu bk 150 pd
-fern 25 1
+oto paproć :rozmiar :znak
+  jeśli :rozmiar < 1 [ stop ]
+  np :rozmiar
+  pw 70 * :znak paproć :rozmiar * 0.5 :znak * -1 lw 70 * :znak
+  np :rozmiar
+  lw 70 * :znak paproć :rozmiar * 0.5 :znak pw 70 * :znak
+  pw 7 * :znak paproć :rozmiar - 1 :znak lw 7 * :znak
+  ws :rozmiar * 2
+już
+okno czyść pod ws 150 opu
+paproć 25 1
